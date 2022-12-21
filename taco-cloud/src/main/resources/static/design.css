@@ -1,0 +1,103 @@
+@charset "ISO-8859-1";
+
+
+.div-container-principal{
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+  grid-template-rows:    1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+  gap: 0.2px 0.2px; 
+  grid-template-areas: 
+    "titlu   titlu     titlu     titlu     titlu titlu     titlu       titlu  	  titlu    titlu   titlu   titlu"
+    "sidebar poza-taco poza-taco poza-taco .     wraps     wraps 	   proteins   proteins sauces  sauces 	."
+    "sidebar poza-taco poza-taco poza-taco .     .         .           .          .  	    . 		.  		."
+    "sidebar poza-taco poza-taco poza-taco . 	 cheeses   cheeses     veggies    veggies 	. 	    .  	    ."
+    "sidebar . 		   .         . 		   .     ingrErr   ingrErr     ingrErr    ingrErr  	. 		.  		."
+    "sidebar . 		   . 		 . 		   .     submit    submit      submit     submit  	. 		.  		."
+    "sidebar . 		   . 		 .		   .     nameErr   nameErr     nameErr    nameErr  	. 		.  		."
+    "sidebar . 		   . 		 .		   .     .         .           .          .  	    . 		.  		."
+    "sidebar . 		   . 		 . 		   .     .         .           .          .  	    . 		.  		."
+    "sidebar . 		   . 		 . 		   .     .         .           .          .  	    . 		.  		."
+    "sidebar . 		   . 		 . 		   .     .         .           .          .  	    . 		.  		."
+    "sidebar . 		   . 		 . 		   .     .         .           .          .  	    . 		.  		.";
+  background:cyan; 
+  height: 100vh;
+}
+
+#wrapsArea{
+	grid-area: wraps;
+}
+#proteinsArea{
+	grid-area: proteins;
+}
+#cheesesArea{
+	grid-area: cheeses;
+}
+#veggiesArea{
+	grid-area: veggies;
+}
+#saucesArea{
+	grid-area: sauces;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}  
+
+.div-titlu{
+	grid-area: titlu;
+	background: blue;
+}
+
+.div-sidebar{
+	grid-area: sidebar;
+	background: red;
+}
+
+.div-poza-taco{
+	grid-area: poza-taco;
+	background: yellow;
+}
+
+.poza-taco-responsive{
+	width:	100%;
+	height:	auto;
+}
+
+.div-submit{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: 1fr;
+	grid-template-areas: 
+		"submit-naming 	submit-naming 	submit-naming 	submit-buton";
+	grid-area: submit;
+	background: green;
+}
+.div-submit-naming{
+	grid-area: submit-naming;
+	display: flex;
+   	align-items:center;
+}
+.div-submit-buton{
+	display: flex;
+	grid-area: submit-buton;
+	justify-content: center;
+   	align-items:	center;
+	background: white;
+}
+.div-submit-err-name, .div-submit-err-ingrediente{
+	display: flex;
+	background:gray;
+	align-items: center;
+	justify-content:center;
+}
+.div-submit-err-name{
+	grid-area:nameErr;
+	
+}
+.div-submit-err-ingrediente{
+	grid-area: ingrErr;
+}
+.text-eroare{
+	color: red;
+}

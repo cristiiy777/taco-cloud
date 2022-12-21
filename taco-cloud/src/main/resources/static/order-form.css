@@ -1,0 +1,184 @@
+@charset "ISO-8859-1";
+
+
+.div-container-principal{
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+  grid-template-rows:    1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+  gap: 0.2px 0.2px; 
+  grid-template-areas: 
+    "titlu   titlu     titlu     titlu     	titlu 	titlu     titlu      titlu  	 titlu     titlu    titlu    titlu"
+    "sidebar poza-taco poza-taco poza-taco 	.     	.         .          .			 . 		    . 	    .  	     ."
+    "sidebar poza-taco poza-taco poza-taco 	.     	delivery  delivery   delivery   delivery 	. 	    .  	     ."
+    "sidebar poza-taco poza-taco poza-taco 	. 	 	delivery  delivery   delivery   delivery 	. 	    .  	     ."
+    "sidebar poza-taco poza-taco poza-taco 	.     	delivery  delivery   delivery   delivery	. 		.  		 ."
+    "sidebar . 		   . 		 . 		   	.     	delivery  delivery   delivery   delivery 	. 		.  		 ."
+    "sidebar . 		   . 		 .		   	.     	delivery  delivery   delivery   delivery    . 		.  		 ."
+    "sidebar . 		   . 		 .		   	.     	delivery  delivery   delivery   delivery    . 		.  		 ."
+    "sidebar . 		   . 		 . 		   	.     	errors    errors     errors     errors 	 	.  	    .        ."
+    "sidebar . 		   . 		 . 		   	.     	errors    errors     errors     errors  	. 		.  		 ."
+    "sidebar . 		   . 		 . 		   	.     	.    	  .          .          .  	        . 		.  		 ."
+    "sidebar . 		   . 		 . 		   	.     	.         .          .          .  	        . 		.  		 .";
+  background:cyan; 
+  height: 100vh;
+}
+
+
+.div-titlu{
+	grid-area: titlu;
+	background: blue;
+}
+
+.div-sidebar{
+	grid-area: sidebar;
+	background: red;
+}
+
+.div-poza-taco{
+	grid-area: poza-taco;
+	background: yellow;
+}
+
+.poza-taco-responsive{
+	width:	100%;
+	height:	auto;
+}
+
+.div-delivery{
+	grid-area: delivery;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+	gap: 0.2px 0.2px;
+	background: green;
+	grid-template-areas:
+	    "adress-title 			adress-title 			adress-title			"
+		"name-label 			name-label 				name-input				"
+		"street-label 			street-label 			street-input			"
+		"city-label 			city-label 				city-input				"
+		"state-label 			state-label 			state-input				"
+		"zip-label 				zip-label 				zip-input				"
+		"paying-title 			paying-title 		    paying-title			"
+		"ccnumber-label 		ccnumber-label			ccnumber-input			"
+		"ccexpiration-label		ccexpiration-label		ccexpiration-input		"
+		"cccvv-label			cccvv-label 			cccvv-input				"
+		". 						. 						.					    "
+		". 						. 						submit 					"
+		". 						. 						submit					";
+
+}
+
+.div-errors{
+	grid-area: errors;
+	overflow: scroll;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+
+label{
+	color: yellow;
+}
+
+#adress-title{
+	grid-area: adress-title;
+	background: white;
+}
+#paying-title{
+	grid-area: paying-title;
+	background: white;	
+}
+#name-field-label{
+	grid-area: name-label;
+}
+#name-field-input{
+	grid-area: name-input;
+}
+#street-field-label{
+	grid-area: street-label;
+}
+#street-field-input{
+	grid-area: street-input;
+}
+#city-field-label{	
+	grid-area: city-label;
+}
+#city-field-input{
+	grid-area: city-input;
+}
+#state-field-label{
+	grid-area: state-label;
+}
+#state-field-input{	
+	grid-area: state-input;
+}
+#zip-field-label{	
+	grid-area: zip-label;
+}
+#zip-field-input{	
+	grid-area: zip-input;
+}
+#ccnumber-field-label{
+	grid-area: ccnumber-label;
+}
+#ccnumber-field-input{
+	grid-area: ccnumber-input;
+}
+#ccexpiration-field-label{
+	grid-area: ccexpiration-label;
+}
+#ccexpiration-field-input{
+	grid-area: ccexpiration-input;
+}
+#cccvv-field-label{
+	grid-area: cccvv-label;
+}
+#cccvv-field-input{
+	grid-area: cccvv-input;
+}
+.div-err-name{
+	grid-area: err-name;	
+}
+.div-err-street{
+	grid-area: err-street;	
+}
+.div-err-city{
+	grid-area: err-city;	
+}
+.div-err-state{
+	grid-area: err-state;	
+}
+.div-err-zip{
+	grid-area: err-zip;	
+}
+.div-err-ccnumber{
+	grid-area: err-ccnumber;	
+}
+.div-err-ccexpiration{
+	grid-area: err-ccexpiration;	
+}
+.div-err-cccvv{
+	grid-area: err-cccvv;
+}
+
+
+
+#submit{
+	grid-area: submit;
+}
+
+.div-err-cccvv, .div-err-ccexpiration, .div-err-ccnumber, .div-err-zip, .div-err-state, .div-err-city, .div-err-street, .div-err-name{
+	display: flex;
+	background: grey;
+	align-items: center;
+	justify-content:center;
+}
+
+.text-eroare{
+	color: red;
+}
+
+label {
+    color: Lime;
+    font-size: 1.5em;
+}

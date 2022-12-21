@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Taco Cloud</title>
+<link rel="stylesheet" th:href="@{/order-form.css}" />
+</head>
+<body>
+<form method="POST" th:action="@{/orders}" th:object="${order}">
+
+<div class="div-container-principal">	
+	
+	<div class="div-titlu">
+		<h1>Order your taco creations!</h1>
+		<a th:href="@{/design}" id="another" style="color: yellow">Design another taco</a><br/>
+	</div>
+	<div class="div-poza-taco">
+		<img th:src="@{/images/TacoCloud.png}" class="poza-taco-responsive"/>
+	</div>
+	<div class="div-sidebar"> 
+	</div>
+	
+<div class="div-delivery">
+	<h3 id = "adress-title">Deliver my taco masterpieces to...</h3>
+				
+	<label id = "name-field-label"   for="name">Name: </label>
+	<input id = "name-field-input"   type="text" th:field="*{name}"/>
+	<label id = "street-field-label" for="street">Street address: </label>
+	<input id = "street-field-input" type="text" th:field="*{street}"/>
+	<label id = "city-field-label"   for="city">City: </label>
+	<input id = "city-field-input"   type="text" th:field="*{city}"/>
+	<label id = "state-field-label"  for="state">State: </label>
+	<input id = "state-field-input"  type="text" th:field="*{state}"/>
+	<label id = "zip-field-label"    for="zip">Zip code: </label>
+	<input id = "zip-field-input"    type="text" th:field="*{zip}"/>
+
+						
+	<h3 id = "paying-title">Here's how I'll pay...</h3>
+		
+	<label id = "ccnumber-field-label" 		for="ccNumber">Credit Card #: </label>
+	<input id = "ccnumber-field-input" 		type="text" th:field="*{ccNumber}"/>
+	<label id = "ccexpiration-field-label"  for="ccExpiration">Expiration: </label>
+	<input id = "ccexpiration-field-input"  type="text" th:field="*{ccExpiration}"/>	
+	<label id = "cccvv-field-label" 		for="ccCVV">CVV: </label>
+	<input id = "cccvv-field-input" 		type="text" th:field="*{ccCVV}"/>
+
+	<input id = "submit" type="submit" value="Submit order"/>	
+
+</div>
+
+<div class="div-errors">
+	<div class="div-err-name" 		 th:if="${#fields.hasErrors('name')}" > 
+		<h3 class="text-eroare"> <span class="validationError"  th:errors="*{name}"></span></h3>
+	</div>	
+	<div class="div-err-street"		  th:if="${#fields.hasErrors('street')}"> 
+		<h3 class="text-eroare"> <span class="validationError"  th:errors="*{street}"></span></h3>
+	</div>	
+	<div class="div-err-city" 		  th:if="${#fields.hasErrors('city')}"> 
+		<h3 class="text-eroare"> <span class="validationError"  th:errors="*{city}"></span></h3>
+	</div>
+	<div class="div-err-state"  	  th:if="${#fields.hasErrors('state')}"> 
+		<h3 class="text-eroare"> <span class="validationError"  th:errors="*{state}"></span></h3>
+	</div>
+	<div class="div-err-zip"     	  th:if="${#fields.hasErrors('zip')}"> 
+		<h3 class="text-eroare"> <span class="validationError"  th:errors="*{zip}"></span></h3>
+	</div>
+	<div class="div-err-ccnumber"	  th:if="${#fields.hasErrors('ccNumber')}"> 
+		<h3 class="text-eroare"> <span class="validationError"  th:errors="*{ccNumber}"></span></h3>
+	</div>
+	<div class="div-err-ccexpiration" th:if="${#fields.hasErrors('ccExpiration')}"> 
+		<h3 class="text-eroare"> <span class="validationError"  th:errors="*{ccExpiration}"></span></h3>
+	</div>
+	<div class="div-err-cccvv" 		  th:if="${#fields.hasErrors('ccCVV')}"> 
+		<h3 class="text-eroare"> <span class="validationError"  th:errors="*{ccCVV}"></span></h3>
+	</div>
+</div>
+
+
+
+			
+</div>
+	
+	
+	<div th:if="${#fields.hasErrors()}">
+		<span class="validationError">
+			Please correct the problems below and resubmit.
+		</span>
+	</div>
+
+</form>
+</body>
+</html>
