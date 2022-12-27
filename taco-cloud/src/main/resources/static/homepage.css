@@ -1,0 +1,213 @@
+@charset "ISO-8859-1";
+
+a{
+  color: black;
+}
+
+.div-container-principal{
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+  grid-template-rows:    1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+  
+  grid-template-areas: 
+	"poza		poza		poza		header		header		header		header		header		header		header		header		header"
+	"poza		poza		poza		header		header		header		header		header		header		header		header		header"
+	"poza		poza		poza		header		header		header		header		header		header		header		header		header"
+	"titlu		titlu		titlu		titlu		titlu		titlu		titlu		titlu		titlu		titlu		titlu		titlu"
+	".			body1		body1		body1		body1		body1		.			body2		body2		body2		body2			."
+	".			body1		body1		body1		body1		body1		.			body2		body2		body2		body2			."
+	".			body1		body1		body1		body1		body1		.			body2		body2		body2		body2			."
+	".			body1		body1		body1		body1		body1		.			body2		body2		body2		body2			."
+	".			body1		body1		body1		body1		body1		.			body2		body2		body2		body2			."
+	".			body1		body1		body1		body1		body1		.			body2		body2		body2		body2			."
+	".			body1		body1		body1		body1		body1		.			body2		body2		body2		body2			."
+	"footer		footer		footer		footer		footer		footer		footer		footer		footer		footer		footer		footer";
+	background-image: url("./images/clouds.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	min-height: 100vh;
+}
+
+.div-poza-taco{
+	grid-area: poza;
+	display: flex;
+	align-content: center;
+}
+
+.poza-taco-responsive{
+	width:	100%;
+	height:	auto;		
+}
+.div-header{
+	grid-area: header;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+  	grid-template-rows:    1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+	grid-template-areas: 
+		"design 	design 		design 		design 		design 		signin 		signin 		signin		signin		 shopcart 		shopcart 		shopcart"
+		"design 	design 		design 		design 		design 		signin 		signin		signin 		signin		 shopcart 	 	shopcart		shopcart"
+		"design 	design 		design 		design 		design 		signin 		signin 		signin 		signin		 shopcart 	 	shopcart		shopcart"
+		"design 	design 		design 		design 		design 		signin 		signin 		signin 		signin		 shopcart 	 	shopcart		shopcart"
+		"design 	design 		design 		design 		design 		signin 		signin 		signin 		signin		 shopcart 	 	shopcart		shopcart"
+		"design 	design 		design 		design 		design 		signin 		signin 		signin 		signin		 shopcart 	 	shopcart		shopcart"
+		"design 	design 		design 		design 		design 		signin 		signin 		signin 		signin		 shopcart 	 	shopcart		shopcart"
+		"latest 	latest		latest 		latest		specials	specials	specials	specials	locations	 locations		locations		locations"		
+		"latest 	latest		latest 		latest		specials	specials	specials	specials	locations	 locations		locations		locations"	
+		"latest 	latest		latest 		latest		specials	specials	specials	specials	locations	 locations		locations		locations"
+		"latest 	latest		latest 		latest		specials	specials	specials	specials	locations	 locations		locations		locations"		
+		"latest		latest	 	latest		latest 		specials	specials	specials	specials	locations	 locations		locations		locations";
+  	height:80%;
+
+}
+
+.div-design{
+	display: flex;
+	justify-content: left;
+	align-items: center;
+	grid-area: design;
+	border-bottom: 2px solid white;
+
+}
+
+.design-p1{
+	font-size:3vw;
+}
+
+.div-signin{
+	grid-area: signin;
+	border-bottom: 2px solid white;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-template-areas: 
+		"signp1 signp1"
+		"signp2 signp2";
+		
+}
+
+.signin-p1{
+	font-size:3vw;	
+	grid-area: signp1;
+}
+
+.signin-p2{
+	font-size:2vw;	
+	grid-area: signp2;
+}
+
+.div-shoppingcart{
+	grid-area: shopcart;
+	border-bottom: 2px solid white;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-template-areas: 
+		"pozashopping textshopping"
+		"pozashopping textshopping";
+	
+}
+
+.div-text-shopping{
+	grid-area: textshopping;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.div-poza-shopping{
+	grid-area: pozashopping;
+	display: flex;
+	justify-content: center;
+	align-items: center;	
+}
+
+.poza-shopping-responsive{
+	width:	100%;
+	height:	auto;		
+}
+
+.shopping-p1{
+	font-size:3vw;	
+}
+
+
+.div-latest-designs{
+	grid-area: latest;
+	border-bottom: 2px solid white;
+	display: flex;
+	justify-content: left;
+	align-items: center;
+}
+.div-specials{
+	grid-area: specials;
+	border-bottom: 2px solid white;
+	display: flex;
+	justify-content: left;
+	align-items: center;
+}
+.div-locations{
+	grid-area: locations;
+	border-bottom: 2px solid white;
+	display: flex;
+	justify-content: left;
+	align-items: center;
+}
+
+
+.latestdesigns-p1, .locations-p1, .specials-p1{
+	font-size:3vw;
+}
+
+
+.div-titlu{
+	grid-area: titlu;
+	display: flex;
+	justify-content: left;
+	align-items: center;
+}
+
+.title-p1{
+	font-size:3vw;
+}
+
+.div-body1{
+	grid-area: body1;
+}
+
+.div-body2{
+	grid-area: body2;
+}
+
+.body1-p1, .body1-p2, .body1-p3{
+	font-size:	1.5vw;
+}
+
+.div-poza-realtacos{
+	display: flex;
+	justify-content: center;
+	align-items: center;	
+	
+}
+.poza-realtacos-responsive{
+	width:	100%;
+	height:	auto;	
+	position: relative;
+	
+}
+
+.div-footer{
+	grid-area: footer;	
+	display: flex;
+	justify-content: left;
+	align-items: center;
+
+}
+
+.footer-p1{
+	font-size:	2vw;
+}
+
+
+
+
+

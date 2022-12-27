@@ -22,6 +22,7 @@ public class TacoWebConfig implements WebMvcConfigurer {
 	@Override
 	public void addViewControllers(ViewControllerRegistry registry) {
 		registry.addViewController("/").setViewName("login");
+		registry.addViewController("/home").setViewName("homepage");
 	}
 	
 	//The session should start when the user logs in. After he logs in he will be redirected do /dashboard

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>Taco Cloud</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" th:href="@{/homepage.css}" />
+</head>
+<body>
+<div class="div-container-principal">
+
+	<div class="div-poza-taco">
+		<a href="home"><img th:src="@{/images/TacoCloud.png}" class="poza-taco-responsive"/></a>
+	</div>
+	
+	<div class="div-header">
+	
+		<div class="div-design">
+			<p class="design-p1"><a href="design">Design a Taco</a></p>
+		</div>
+		<div class="div-signin">
+			<p class="signin-p1"><a href="login">Sign In</a></p>
+			<p class="signin-p2"><a href="register">Or Create A New Account</a></p>
+		</div>
+		<div class="div-shoppingcart">
+			<div class="div-text-shopping">
+				<p class="shopping-p1">$0.00</p>
+			</div>
+			<div class="div-poza-shopping">
+				<a href="shopping-cart"><img th:src="@{/images/shopping-cart.png}" class="poza-shopping-responsive"/></a>
+			</div>
+		</div>
+		<div class="div-latest-designs">
+			<p class="latestdesigns-p1"><a href="latest">Latest Designs</a></p>
+		</div>
+		<div class="div-specials">
+			<p class="specials-p1"><a href="specials">Specials</a></p>
+		</div>
+		<div class="div-locations">
+			<p class="locations-p1"><a href="locations">Locations</a></p>
+		</div>
+	
+	</div>
+
+	<div class="div-titlu">
+		<p class="title-p1">Where taco hunger meets taco creativity</p>
+	</div>
+	
+	<div class="div-body1">
+		<p class="body1-p1">
+		We love tacos. All kinds of tacos. And we love being creative with the way we make our tacos.
+		</p>
+		<p class="body1-p2">
+		Some Taco joints offer a set, finite menu of tacosto choose from. At Taco Cloud, we want to share the joy of taco creativity with you,
+		allowing you to design your own tacos from a palette of fresh and delicious ingredients. While we may offer
+		some of our creations for you to try, the real fun is when you create your own tortilla-wrapped works of art.
+		</p>
+		<p class="body1-p3">
+		And, even though we love tacos and creativity, we prefer to avoid complex math. That's why all tacos are
+		priced modestly at $4.99 each, no matter how many or what ingredients you choose.
+		</p>
+	</div>
+	
+	<div class="div-body2">
+		<div class="div-poza-realtacos">
+			<img th:src="@{/images/real-tacos.jpg}" class="poza-realtacos-responsive"/>
+		</div>		
+	</div>
+	
+	<div class="div-footer">
+		<p class="footer-p1">To learn more about Taco Cloud, read<a href="https://www.manning.com/books/spring-in-action-fifth-edition"> &nbsp;Spring In Action 5th Edition.</a></p>
+	</div>
+
+</div>
+</body>
+</html>
